@@ -4,6 +4,16 @@ int firstNum = Convert.ToInt32(System.Console.ReadLine());
 System.Console.Write("Please enter second number: ");
 int secondNum = Convert.ToInt32(System.Console.ReadLine());
 
+string conditional =
+   firstNum >= 0
+      ? "First number is positive"
+      : "First number is negative";
+System.Console.WriteLine(conditional);
+string conditional1 = 
+   secondNum >= 0
+      ? "Second number is positive"
+      : "Second number is negative";
+System.Console.WriteLine(conditional1);
 if(firstNum>secondNum)
 {
    
