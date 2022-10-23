@@ -31,8 +31,12 @@ switch(desire)
          case '%':
             System.Console.WriteLine($"{firstNum}%{secondNum}={firstNum%secondNum}");
          break;
+         default:
+            System.Console.WriteLine("Operation don't found!!!");
+         break;
       }
    break;
+   
    case 2:
        string conditional =
          firstNum >= 0
@@ -128,6 +132,9 @@ switch(desire)
          }
          System.Console.WriteLine($"{firstNum} equal to  {secondNum}");
       }
+   break;
+   default:
+      System.Console.WriteLine("Operation don't found!!!");
    break;
 }
 System.Console.WriteLine("Thank for using!!!");
