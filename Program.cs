@@ -13,28 +13,18 @@ switch(desire)
 {
    case 1:
       System.Console.WriteLine("Please choose the operation(+|-|*|/|%):");
-      char operation = Convert.ToChar(Console.ReadLine());
-      switch(operation)
+      string operation = Console.ReadLine();
+      string calculate = operation switch
       {
-         case '+':
-            System.Console.WriteLine($"{firstNum}+{secondNum}={firstNum+secondNum}");
-         break;
-         case '-':
-            System.Console.WriteLine($"{firstNum}-{secondNum}={firstNum-secondNum}");
-         break;
-         case '*':
-            System.Console.WriteLine($"{firstNum}*{secondNum}={firstNum*secondNum}");
-         break;
-         case '/':
-            System.Console.WriteLine($"{firstNum}/{secondNum}={firstNum/secondNum}");
-         break;
-         case '%':
-            System.Console.WriteLine($"{firstNum}%{secondNum}={firstNum%secondNum}");
-         break;
-         default:
-            System.Console.WriteLine("Operation don't found!!!");
-         break;
-      }
+         "+" => $"{firstNum}+{secondNum}={firstNum+secondNum}",
+         "-" => $"{firstNum}-{secondNum}={firstNum-secondNum}",
+         "*" => $"{firstNum}*{secondNum}={firstNum*secondNum}",
+         "/" => $"{firstNum}/{secondNum}={firstNum/secondNum}",
+         "%" => $"{firstNum}%{secondNum}={firstNum%secondNum}",
+         _  => "Operation Not found"
+      };
+      System.Console.WriteLine(calculate);
+      
    break;
    
    case 2:
